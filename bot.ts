@@ -59,13 +59,16 @@ client.on('messageDelete', async (message: Message | any) => {
 });
 
 
-client.user?.setActivity({
+
+client.once(Events.ClientReady, c => {
+  console.log(`Ready! Logged in as ${c.user.tag}`);
+  
+  client.user?.setActivity({
     name: 'Im watching you',
     type: ActivityType.Watching,
   });
 
-client.once(Events.ClientReady, c => {
-  console.log(`Ready! Logged in as ${c.user.tag}`);
+client.user?.setStatus('online');
 });
 
 client.login(process.env.DISCORD_TOKEN);
