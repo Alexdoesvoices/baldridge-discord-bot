@@ -48,7 +48,7 @@ client.once(Events.ClientReady, async (c) => {
   await syncRecentMessages();
   console.log('📡 MONITORING: Simple deletion logs active');
   console.log('--------------------------------------');
-  client.user?.setActivity({ name: 'Deletions', type: ActivityType.Watching });
+  client.user?.setActivity({ name: 'Im watching you', type: ActivityType.Watching });
 });
 
 // Save live messages to SQLite
