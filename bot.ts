@@ -24,7 +24,7 @@ client.on('messageDelete', async (message: Message | any) => {
 
   const deleteEmbed = new EmbedBuilder()
     .setTitle('🗑️ Message Deleted')
-    .setColor('#ff4757')
+    .setColor('Random')
     .setAuthor({ 
       name: message.author.tag, 
       iconURL: message.author.displayAvatarURL() 
