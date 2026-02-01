@@ -1,4 +1,4 @@
-import { Client, GatewayIntentBits, EmbedBuilder, Partials, Message, Events } from 'discord.js';
+import { Client, GatewayIntentBits, EmbedBuilder, Partials, Message, Events, ActivityType } from 'discord.js';
 
 const client = new Client({
   intents: [
@@ -58,6 +58,11 @@ client.on('messageDelete', async (message: Message | any) => {
   }
 });
 
+
+client.user?.setActivity({
+    name: 'Im watching you',
+    type: ActivityType.Watching,
+  });
 
 client.once(Events.ClientReady, c => {
   console.log(`Ready! Logged in as ${c.user.tag}`);
