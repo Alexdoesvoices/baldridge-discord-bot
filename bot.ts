@@ -70,7 +70,7 @@ client.on(Events.MessageDelete, async (message: Message | any) => {
       content = row.content;
       authorTag = row.authorTag;
       authorId = row.authorId;
-    } else return; // Truly unknown message
+    } else return; 
   }
 
   const logChannel = message.guild.channels.cache.get(LOG_CHANNEL_ID) as TextChannel;
@@ -78,7 +78,7 @@ client.on(Events.MessageDelete, async (message: Message | any) => {
 
   const deleteEmbed = new EmbedBuilder()
     .setTitle('🗑️ Message Deleted')
-    .setColor('#ff4757') // Neutral dark color
+    .setColor('#ff4757')
     .setAuthor({ name: authorTag })
     .addFields(
       { name: 'Author', value: `<@${authorId}>`, inline: true },
