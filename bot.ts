@@ -59,7 +59,7 @@ client.once(Events.ClientReady, async (c) => {
   
   console.log('📡 MONITORING: Deletion logs active');
   console.log('--------------------------------------');
-  client.user?.setActivity({ name: 'Deletions', type: ActivityType.Watching });
+  client.user?.setActivity({ name: 'Im watching you', type: ActivityType.Watching });
 });
 
 // Save live messages
