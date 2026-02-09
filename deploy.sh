@@ -1,4 +1,4 @@
-#!usr/bin/env bash
+#!usr/bin/env bas
 
 git fetch origin master
 git reset --hard origin/master
