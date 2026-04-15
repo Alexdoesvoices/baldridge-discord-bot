@@ -8,6 +8,6 @@ chmod +x deploy.sh
 
 bun install
 
-pm2 restart ecosystem.config.cjs
+pm2 restart ecosystem.config.cjs --update-env
 
 echo "Done!"
